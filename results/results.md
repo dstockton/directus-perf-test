@@ -20,4 +20,4 @@ Login page: start 15, +1/5s, max 60. Others: start 2, +1/5s, max 60.
 
 | Version | Login Page | REST API | GraphQL | Studio |
 |---------|-----------|----------|---------|--------|
-| remote | 15 | 2 | 3 | 2 |
+| remote | 18 | 4 | 3 | 2 |
