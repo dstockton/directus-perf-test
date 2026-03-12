@@ -5,13 +5,14 @@ Single self-contained bash script that finds the maximum concurrent VUs a Direct
 ## Usage
 
 ```bash
-# Test a local Directus instance
-bash directus-perf-test.sh
+# One-liner — no clone needed
+curl -sL https://raw.githubusercontent.com/dstockton/directus-perf-test/main/directus-perf-test.sh | bash
 
-# Custom target + thresholds
-DIRECTUS_URL=http://my-server:8055 \
-DIRECTUS_MAX_P95=750 \
-DIRECTUS_MAX_ERR=1 \
+# With env var overrides
+curl -sL https://raw.githubusercontent.com/dstockton/directus-perf-test/main/directus-perf-test.sh \
+  | DIRECTUS_URL=http://my-server:8055 DIRECTUS_PASS=secret bash
+
+# Local (after cloning)
 bash directus-perf-test.sh
 
 # CI-friendly: final VU number goes to stdout, logs to stderr
